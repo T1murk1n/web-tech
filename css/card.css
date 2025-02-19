@@ -1,0 +1,70 @@
+.product-section {
+    padding: 30px 0 30px 0;
+}
+.product__container {
+}
+.product-content__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product__img {
+    width: 100%;
+    min-height: 770px;
+    background-image: url('../img/orange.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product__post-meta__row {
+    display: flex;
+    gap: 14px;
+    padding: 0 14px 0 14px;
+}
+.meta-tag.tag-food::before {
+    content: "";
+    background-image: url("../img/icon/zakladka.svg");
+    display: inline-block;
+    width: 19px;
+    height: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+.meta-tag.tag-author::before {
+    content: "";
+    background-image: url("../img/icon/author.svg");
+    display: inline-block;
+    width: 24px;
+    height: 19px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.product__title {
+    padding: 10px 0 10px 0;
+    color: #1A1A1A;
+    font-size: 36px;
+}
+.description {
+    color: #808080;
+    font-size: 20px;
+}
+.product__image-comparison {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 14px;
+}
+.product__image-comparison div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+.product__image-comparison div:nth-child(1) {
+    background-image: url('../img/pic1.png');
+    flex: 1 1 50%;
+}
+.product__image-comparison div:nth-child(2) {
+    background-image: url('../img/pic2.png');
+    flex: 1 1 50%;
+}
