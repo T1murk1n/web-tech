@@ -1,0 +1,136 @@
+.form-section {
+    padding: 100px 0 100px 0;
+}
+.form__container {
+}
+.form__row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+}
+.form__text-block {
+    flex: 0 1 550px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 100px 0 100px 0;
+}
+.form__title {
+    font-family: 'Oswald';
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.form__title::after {
+    content: "";
+    width: 40px;
+    height: 6px;
+    background-color: #6dbd45;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: block;
+}
+
+.form__sub-title {
+    font-size: 18px;
+}
+.form__description {
+    font-size: 16px;
+}
+.form__picture {
+    background-image: url(../img/form-img.png);
+    background-repeat: no-repeat;
+    flex: 0 1 500px;
+    margin-right: 100px;
+    min-height: 475px;
+    position: relative;
+}
+.frame {
+    width: 286px;
+    height: 286px;
+    border: 20px solid #70BD59;
+    background-color: transparent;
+    position: absolute;
+    bottom: 24%;
+    right: -20%;
+}
+
+.order-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #e8e8e8;
+    border-radius: 6px;
+    outline: none;
+    color: #666;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #6dbd45;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5ca43a;
+}
+.form-title {
+    font-family: 'Oswald';
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+}
+
+.form-title::after {
+    content: "";
+    width: 5%;
+    height: 6px;
+    background-color: #6dbd45;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: block;
+}
+.form-title__section {
+    padding: 40px 0 0 0;
+}
