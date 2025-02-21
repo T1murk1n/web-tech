@@ -53,21 +53,28 @@ a[class$="__link"] {
     background-color: #000;
     font-family: sans-serif;
     font-weight: 200;
+    position: fixed;    
+    width: 100%;
+    z-index: 56;
+}
+.logo {
+    background-image: url(../img/icon/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 60px;
+    height: 60px;
 }
 .menu {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: end; 
+    justify-content: space-between; 
     min-height: 110px;
 }
 .header__menu-main-screen {
-    position: fixed;
-    width: 100%;
     background: transparent;
     transition: background 0.5s ease;
-    z-index: 56;
 }
 .header__menu-main-screen.scrolled {
     background-color: #000;
@@ -114,6 +121,8 @@ a[class$="__link"] {
 }
 .footer__workTogether-card {
     background-color: #FBFBFB;
+    text-decoration: none;
+    list-style-type: none;
 }
 .footer__workTogether-card__icon {
     background-image: url(../img/icon/briefcase.svg);
@@ -121,6 +130,7 @@ a[class$="__link"] {
     height: 35px;
 }
 .footer__workTogether-card__title {
+    color: #000;
     font-size: 24px;
 }
 .footer__workTogether-card__description {
@@ -129,6 +139,8 @@ a[class$="__link"] {
 }
 .footer__write-card {
     background-color: #70BD59;
+    text-decoration: none;
+    list-style-type: none;
 }
 .footer__write-card__icon {
     background-image: url(../img/icon/mail.svg);
@@ -167,17 +179,19 @@ a[class$="__link"] {
     display: flex;
     gap: 21px;
 }
-.footer-main__icon-row span {
+.footer-main__icon-row a {
     width: 32px;
     height: 32px;
+    text-decoration: none;
+    list-style-type: none;
 }
-.footer-main__icon-row span:nth-child(1) {
+.footer-main__icon-row a:nth-child(1) {
     background-image: url(../img/icon/facebook.svg);
 }
-.footer-main__icon-row span:nth-child(2) {
+.footer-main__icon-row a:nth-child(2) {
     background-image: url(../img/icon/twitter.svg);
 }
-.footer-main__icon-row span:nth-child(3) {
+.footer-main__icon-row a:nth-child(3) {
     background-image: url(../img/icon/pinterest.svg);
 }
 .footer__lower {
