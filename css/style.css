@@ -60,9 +60,9 @@ a[class$="__link"] {
 .logo {
     background-image: url(../img/icon/logo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 60px;
-    height: 60px;
+    background-size: contain;
+    min-width: 90px;
+    height: 90px;
 }
 .menu {
     width: 100%;
@@ -199,4 +199,41 @@ a[class$="__link"] {
     text-align: center;
     color: #FFFFFF;
     padding: 21px 0 21px 0;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    transform: rotate(45deg);
+    margin-bottom: -6px;
+}
+
+.scroll-to-top:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
 }

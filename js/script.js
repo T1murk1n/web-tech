@@ -1,10 +1,22 @@
-window.addEventListener('scroll', function() {
-    const menu = document.querySelector('.header__menu-main-screen');
+document.addEventListener("DOMContentLoaded", function () {
+   
+    const scrollToTopButton = document.getElementById("scrollToTop");
 
-    // Проверка, прокручена ли страница на 100vh
-    if (window.scrollY > window.innerHeight * 0.6) {
-        menu.classList.add('scrolled');  // Добавляем класс для изменения фона
-    } else {
-        menu.classList.remove('scrolled');  // Убираем класс, если прокрутка меньше 100vh
-    }
+    window.addEventListener("scroll", function () {
+
+        // Проверка, прокручена ли страница на 100vh
+        if (window.scrollY > 200) {
+            scrollToTopButton.classList.add("show");
+        } else {
+            scrollToTopButton.classList.remove("show");
+        }
+
+    });
+
+    scrollToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });
