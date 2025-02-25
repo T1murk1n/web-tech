@@ -58,11 +58,11 @@ a[class$="__link"] {
     z-index: 56;
 }
 .logo {
-    background-image: url(../img/icon/logo.svg);
+    background-image: url(../img/icon/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
-    min-width: 90px;
-    height: 90px;
+    min-width: 100px;
+    height: 100px;
 }
 .menu {
     width: 100%;
