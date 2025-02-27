@@ -63,7 +63,7 @@ header {
     color: orange;
 }
 .card__img {
-    background-image: url(../img/perez.png);
+    /* background-image: url(../img/perez.png); */
     min-width: 260px;
     min-height: 300px;
 }
