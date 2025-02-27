@@ -20,4 +20,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             setRating(productElement, rating);
         }
     });
+
+
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.catalog__card');
+
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const filterValue = searchInput.value.toLowerCase();
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card__title').textContent.toLowerCase();
+                if (title.includes(filterValue)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    });
 });
+
