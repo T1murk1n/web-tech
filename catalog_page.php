@@ -6,10 +6,13 @@
     <title>Полезные фрукты и овощи</title>
     <link rel="icon" href="./img/icon/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
-
+<?php
+    // Включаем файл с подключением к базе данных
+    require 'connection.php';
+?>
 <header>
     <div class="header__menu">
         <div class="header__container">
@@ -27,50 +30,37 @@
     </div>
 </header>
 
-<section class="form-title__section">
-    <div class="form-title__container">
-        <h2 class="form-title">форма отправки</h2>
+<section class="catalog-title__section">
+    <div class="catalog-title__container">
+        <h2 class="catalog-title">Каталог</h2>
+        <input type="text" id="searchInput" placeholder="Поиск..." class="search-input">
     </div>
 </section>
-<section class="form-section">
-     <!-- Контейнер для формы -->
-    <div class="form__container">
-        <div class="form__row">
-            <!-- Блок с текстом и заголовком формы -->
-            <div class="form__text-block">
-                <!-- Заголовок формы -->
-                <h3 class="form__title">Оставьте заявку на свежие фрукты и овощи!</h3>
-                 <!-- Форма для оформления заказа -->
-                <form action="#" class="order-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="Имя" class="form-input">
-                        <input type="email" placeholder="Email" class="form-input">
+
+<section class="catalog-grid__section">
+     <!-- Контейнер для всего каталога товаров -->
+    <div class="catalog__container">
+        <!-- Контейнер для сетки карточек товаров -->
+        <div class="grid-container">
+            <!-- Карточка товара -->
+
+            <?php foreach ($products as $product): ?>
+                <a href="card.html" class="catalog__card card" data-id="<?php echo $product['id']; ?>">
+                    <img src="./<?php echo htmlspecialchars($product['image']); ?>" class="card__img">
+                    <h3 class="card__title"><?php echo htmlspecialchars($product['name']); ?></h3>
+                    <p class="card__price"><?php echo htmlspecialchars($product['price']); ?>₽</p>
+                    <div class="card__rating" id="rating">
+                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                            <span class="star <?php echo ($i <= $product['rating']) ? 'filled' : ''; ?>" data-value="<?php echo $i; ?>">★</span>
+                        <?php endfor; ?>
                     </div>
-                    <div class="form-row">
-                        <input type="tel" placeholder="Телефон" class="form-input">
-                        <!-- Выпадающий список для выбора продуктов -->
-                        <select class="form-input">
-                            <option>Продукты</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <!-- Выпадающий список для выбора адреса -->
-                        <select class="form-input">
-                            <option>Адрес</option>
-                        </select>
-                        <input type="text" placeholder="Комментарий" class="form-input">
-                    </div>
-                    <!-- Кнопка для отправки формы (оформления заказа) -->
-                    <button type="submit" class="btn-reset submit-btn">Оформить заказ</button>
-                </form>
-                
-            </div>
-            <div class="form__picture">
-                <div class="frame"></div>
-            </div>
+                </a>
+            <?php endforeach; ?>
+            
         </div>
     </div>
 </section>
+
 
 <footer>
     <div class="footer_top">
@@ -107,6 +97,8 @@
     </div>
 </footer>
 <a id="scrollToTop" class="scroll-to-top"></a>
+
+<script src="js/catalog.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
