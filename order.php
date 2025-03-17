@@ -10,9 +10,6 @@ $phone = $_POST['phone'];
 $product = $_POST['product'];
 $comment = $_POST['comment'] ?? '';
 
-
-
-// Пример запроса на вставку данных в базу данных
 $query = "INSERT INTO orders (name, email, phone, product_id, address, comment) 
           VALUES (:name, :email, :phone, :product, :address, :comment)";
 $stmt = $pdo->prepare($query);

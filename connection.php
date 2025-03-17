@@ -7,8 +7,6 @@ $pass = '';
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Простой запрос для проверки подключения
-    $stmt = $pdo->query("SELECT 1");
 
     // Запрос для выборки всех товаров из базы данных
     $stmt = $pdo->query("SELECT * FROM products");

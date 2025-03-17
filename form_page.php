@@ -19,8 +19,8 @@
                     <li class="menu__item-row"><a href="index.html" class="menu__link">Главная</a></li>
                     <li class="menu__item-row"><a href="index.html#about-section" class="menu__link">О нас</a></li>
                     <li class="menu__item-row"><a href="index.html#contact-section" class="menu__link">Связь с нами</a></li>
-                    <li class="menu__item-row"><a href="form_page.html" class="menu__link">Форма отправки</a></li>
-                    <li class="menu__item-row"><a href="catalog_page.html" class="menu__link">Каталог</a></li>
+                    <li class="menu__item-row"><a href="form_page.php" class="menu__link">Форма отправки</a></li>
+                    <li class="menu__item-row"><a href="catalog_page.php" class="menu__link">Каталог</a></li>
                 </ul>
             </div>
         </div>
