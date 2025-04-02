@@ -90,3 +90,8 @@ header {
     border-radius: 5px;
     font-size: 16px;
 }
+#load-products-button {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}

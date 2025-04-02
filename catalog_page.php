@@ -29,7 +29,7 @@
         </div>
     </div>
 </header>
-
+<button id="load-products-button"></button>
 <section class="catalog-title__section">
     <div class="catalog-title__container">
         <h2 class="catalog-title">Каталог</h2>
@@ -44,18 +44,7 @@
         <div class="grid-container">
             <!-- Карточка товара -->
 
-            <?php foreach ($products as $product): ?>
-                <a href="card.html" class="catalog__card card" data-id="<?php echo $product['id']; ?>">
-                    <img src="./<?php echo htmlspecialchars($product['image']); ?>" class="card__img">
-                    <h3 class="card__title"><?php echo htmlspecialchars($product['name']); ?></h3>
-                    <p class="card__price"><?php echo htmlspecialchars($product['price']); ?>₽</p>
-                    <div class="card__rating" id="rating">
-                        <?php for ($i = 1; $i <= 5; $i++): ?>
-                            <span class="star <?php echo ($i <= $product['rating']) ? 'filled' : ''; ?>" data-value="<?php echo $i; ?>">★</span>
-                        <?php endfor; ?>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+
             
         </div>
     </div>
