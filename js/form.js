@@ -124,13 +124,33 @@ document.addEventListener("DOMContentLoaded", function () {
         // Проверяем, что все поля заполнены перед отправкой
         let formObject = {};
         let isValid = true;
+        // formData.forEach((value, key) => {
+        //     if (!value.trim()) { // Если значение пустое
+        //         isValid = false;
+        //     }
+        //     formObject[key] = value.trim();
+        // });
+
         formData.forEach((value, key) => {
-            if (!value.trim()) { // Если значение пустое
+            const trimmedValue = value.trim();
+            formObject[key] = trimmedValue;
+        
+            if (!trimmedValue) {
                 isValid = false;
             }
-            formObject[key] = value.trim();
+        
+            // Добавим проверку email, если поле называется "email"
+            if (key === "email") {
+                const emailRegex = /^[^@]+@[^@]+\.[^@]+$/;
+                if (!emailRegex.test(trimmedValue)) {
+                    isValid = false;
+                    showModal("Ошибка", "Некорректный формат email!");
+                }
+            }
         });
 
+        
+        
         if (!isValid) {
             showModal("Ошибка", "Не все поля заполнены!");
             return;
